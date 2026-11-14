@@ -209,7 +209,9 @@ about_ui <- card(
     ),
     h5("Built with"),
     p("R · Shiny · bslib · plotly · DT · dplyr. Part of my ",
-      a("cybersecurity portfolio", href = "https://github.com/your-username/cybersecurity-portfolio", target = "_blank"), ".")
+      a("cybersecurity portfolio", href = "https://pulemolise.net/cybersecurity/kev-tracker/", target = "_blank"),
+      ". Source code on ",
+      a("GitHub", href = "https://github.com/pulemoliserr/kev-tracker-shiny", target = "_blank"), ".")
   )
 )
 
