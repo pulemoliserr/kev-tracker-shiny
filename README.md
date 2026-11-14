@@ -2,7 +2,9 @@
 
 An interactive R Shiny dashboard of **CISA's Known Exploited Vulnerabilities (KEV) catalog**, the official list of vulnerabilities confirmed to be exploited in real attacks. KEV is one of the most practical signals for vulnerability management: of the tens of thousands of CVEs published each year, these are the ones to patch first.
 
-**Live app:** https://your-account.shinyapps.io/kev-tracker *(add the link after deploying)*
+**Live app:** https://sqc2ym-pule-molise.shinyapps.io/kev-tracker-shiny/
+
+Part of my cybersecurity portfolio: [project write-up](https://pulemolise.net/cybersecurity/kev-tracker/) · [pulemolise.net](https://pulemolise.net)
 
 ![Overview](docs/overview.png)
 
@@ -38,7 +40,7 @@ The sidebar filters (date range, vendor, ransomware use, free-text search) apply
 
 ```r
 install.packages(c("shiny", "bslib", "dplyr", "tidyr", "stringr", "readr", "plotly", "DT"))
-shiny::runApp("kev-tracker-shiny")
+shiny::runApp()   # from the repository folder
 ```
 
 ## Deploy to shinyapps.io
@@ -46,7 +48,7 @@ shiny::runApp("kev-tracker-shiny")
 ```r
 install.packages("rsconnect")
 rsconnect::setAccountInfo(name = "<account>", token = "<token>", secret = "<secret>")  # from shinyapps.io → Account → Tokens
-rsconnect::deployApp("kev-tracker-shiny", appName = "kev-tracker")
+rsconnect::deployApp(".", appName = "kev-tracker-shiny")
 ```
 
 ## Design notes
